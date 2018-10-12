@@ -1,4 +1,4 @@
-image: /home/kurt/catkin_ws/src/sustc_follow/maps/Software_Museum.pgm
+image: /home/gu/catkin_ws/src/Multi-Turtlebot3-Synergy/map/Software_Museum.pgm
 resolution: 0.050000
 origin: [-25.000000, -25.000000, 0.000000]
 negate: 0
