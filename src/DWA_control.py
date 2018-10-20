@@ -19,7 +19,7 @@ import turtlesim.msg
 import geometry_msgs.msg
 from sensor_msgs.msg import LaserScan
 
-roslib.load_manifest('multi_turtlebot_opt')
+roslib.load_manifest('Multi-Turtlebot3-Synergy')
 
 u = np.array([0.2, 0.0]) #初始化速度空间
 x = np.array([0.0, 0.0, math.pi / 2.0, 0.2, 0.0]) #初始化位置空间
@@ -301,7 +301,7 @@ if __name__ == '__main__':
     while not rospy.is_shutdown():
 
         try:
-            (trans, rot) = listener.lookupTransform('/'+tb3_id, '/'+goal_id , rospy.Time(0))
+            (trans, rot) = listener.lookupTransform('/'+tb3_id+'/base_footprint', '/'+goal_id+'/base_footprint' , rospy.Time(0))
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
             continue
 
