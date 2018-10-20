@@ -9,18 +9,6 @@ Multi turtlebot3 follow start
     <arg name="open_rviz" default="false"/>
     <arg name="rviz_turtlebot_id" default="tb3_0"/>
    
-    <node name="turtle1_tf_broadcaster" pkg="Multi-Turtlebot3-Synergy" type="turtle_tf_broadcaster.py" respawn="false" output="screen" >
-      	<param name="turtle" type="string" value="tb3_0" />
-    </node>
-
-    <node name="turtle2_tf_broadcaster" pkg="Multi-Turtlebot3-Synergy" type="turtle_tf_broadcaster.py" respawn="false" output="screen" >
-      	<param name="turtle" type="string" value="tb3_1" /> 
-    </node>
-
-    <node name="turtle3_tf_broadcaster" pkg="Multi-Turtlebot3-Synergy" type="turtle_tf_broadcaster.py" respawn="false" output="screen" >
-      	<param name="turtle" type="string" value="tb3_2" /> 
-    </node>
-
     <node pkg="Multi-Turtlebot3-Synergy" type="DWA_control.py" name="follower_controls_1" output="screen">
 	<param name="mode" type="string" value="follow" />
       	<param name="tb3_id" type="string" value="tb3_1" /> 
